@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page with Filters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Our Products</h1>
+            <p>Find the perfect product for your needs</p>
+        </header>
+
+        <div class="filters">
+            <div class="filter-group">
+                <h3>Categories</h3>
+                <ul class="category-list">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="category" value="electronics" checked> Electronics
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="category" value="clothing" checked> Clothing
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="category" value="home" checked> Home & Garden
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="category" value="books" checked> Books
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="category" value="sports" checked> Sports
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter-group">
+                <h3>Price Range</h3>
+                <input type="range" class="price-range" min="0" max="1000" value="1000" step="10">
+                <div class="price-values">
+                    <span>$0</span>
+                    <span>$1000</span>
+                </div>
+                <p>Max price: $<span id="current-price">1000</span></p>
+            </div>
+        </div>
+
+        <div class="sort-options">
+            <span>Sort by:</span>
+            <select id="sort-by">
+                <option value="rating-desc">Rating (High to Low)</option>
+                <option value="rating-asc">Rating (Low to High)</option>
+                <option value="price-desc">Price (High to Low)</option>
+                <option value="price-asc">Price (Low to High)</option>
+                <option value="name-asc">Name (A-Z)</option>
+                <option value="name-desc">Name (Z-A)</option>
+            </select>
+        </div>
+
+        <div class="products-grid" id="products-container">
+            <!-- Products will be loaded here by JavaScript -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
