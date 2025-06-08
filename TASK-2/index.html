@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Image Gallery</title>
+  <link rel="stylesheet" href="in.css">
+</head>
+<body>
+  <div class="container">
+    <h1> Image Gallery</h1>
+
+    <div class="toggle-buttons">
+      <button onclick="showSection('todo')">To-Do List</button>
+      <button onclick="showSection('gallery')">Image Gallery</button>
+    </div>
+
+    <!-- To-Do Section -->
+    <div id="todo-section">
+      <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Add a task" />
+        <button onclick="addTask()">Add</button>
+      </div>
+      <ul id="taskList"></ul>
+    </div>
+
+    <!-- Gallery Section -->
+    <div id="gallery-section" class="hidden">
+      <div class="input-group">
+        <input type="text" id="imageInput" placeholder="Paste image URL" />
+        <button onclick="addImage()">Add Image</button>
+      </div>
+      <div class="gallery" id="imageGallery"></div>
+    </div>
+  </div>
+   <script src="script.js"></script>
+  
+</body>
+</html>
